@@ -97,8 +97,9 @@ function App() {
   async function deleteElement(task,index) {
     const newTodos = todos.filter((task, currentIndex) => index != currentIndex)
     console.log(newTodos)
-    if (newTodos.length === 1 ){
+    if (newTodos.length > 0 ){
       putTodos(newTodos)
+      console.log(newTodos.length)
     } else {
       deleteTodos()
     }
